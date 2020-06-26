@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html>
+  <head><!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8"><style>/*
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  background-color: #fff;
+}
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+.span12 {
+  width: 940px;
+}
+.span11 {
+  width: 860px;
+}
+.span10 {
+  width: 780px;
+}
+.span9 {
+  width: 700px;
+}
+.span8 {
+  width: 620px;
+}
+.span7 {
+  width: 540px;
+}
+.span6 {
+  width: 460px;
+}
+.span5 {
+  width: 380px;
+}
+.span4 {
+  width: 300px;
+}
+.span3 {
+  width: 220px;
+}
+.span2 {
+  width: 140px;
+}
+.span1 {
+  width: 60px;
+}
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container:after {
+  clear: both;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+small {
+  font-size: 85%;
+}
+h1 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+h1 {
+  line-height: 40px;
+}
+h1 {
+  font-size: 38.5px;
+}
+h1 small {
+  font-size: 24.5px;
+}
+body {
+  margin-top: 90px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -480px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  z-index: 10;
+}
+.footer {
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.the-icons {
+  font-size: 14px;
+  line-height: 24px;
+}
+.switch {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #666;
+}
+.switch input {
+  margin-right: 0.3em;
+}
+.codesOn .i-name {
+  display: none;
+}
+.codesOn .i-code {
+  display: inline;
+}
+.i-code {
+  display: none;
+}
+@font-face {
+      font-family: 'was';
+      src: url('./font/was.eot?79859089');
+      src: url('./font/was.eot?79859089#iefix') format('embedded-opentype'),
+           url('./font/was.woff?79859089') format('woff'),
+           url('./font/was.ttf?79859089') format('truetype'),
+           url('./font/was.svg?79859089#was') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "was";
+      font-style: normal;
+      font-weight: normal;
+      speak: never;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+     </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/" + font.fontname + "-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>Web Awesome <small>font demo</small></h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div class="container" id="icons">
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe800"><i class="demo-icon wa-emo-happy">&#xe800;</i> <span class="i-name">was wa-emo-happy</span><span class="i-code">0xe800</span></div>
+        <div class="the-icons span3" title="Code: 0xe801"><i class="demo-icon wa-emo-wink">&#xe801;</i> <span class="i-name">was wa-emo-wink</span><span class="i-code">0xe801</span></div>
+        <div class="the-icons span3" title="Code: 0xe802"><i class="demo-icon wa-emo-unhappy">&#xe802;</i> <span class="i-name">was wa-emo-unhappy</span><span class="i-code">0xe802</span></div>
+        <div class="the-icons span3" title="Code: 0xe803"><i class="demo-icon wa-emo-sleep">&#xe803;</i> <span class="i-name">was wa-emo-sleep</span><span class="i-code">0xe803</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe804"><i class="demo-icon wa-emo-thumbsup">&#xe804;</i> <span class="i-name">was wa-emo-thumbsup</span><span class="i-code">0xe804</span></div>
+        <div class="the-icons span3" title="Code: 0xe805"><i class="demo-icon wa-search">&#xe805;</i> <span class="i-name">was wa-search</span><span class="i-code">0xe805</span></div>
+        <div class="the-icons span3" title="Code: 0xe806"><i class="demo-icon wa-emo-surprised">&#xe806;</i> <span class="i-name">was wa-emo-surprised</span><span class="i-code">0xe806</span></div>
+        <div class="the-icons span3" title="Code: 0xe807"><i class="demo-icon wa-emo-tongue">&#xe807;</i> <span class="i-name">was wa-emo-tongue</span><span class="i-code">0xe807</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe808"><i class="demo-icon wa-emo-coffee">&#xe808;</i> <span class="i-name">was wa-emo-coffee</span><span class="i-code">0xe808</span></div>
+        <div class="the-icons span3" title="Code: 0xe809"><i class="demo-icon wa-emo-sunglasses">&#xe809;</i> <span class="i-name">was wa-emo-sunglasses</span><span class="i-code">0xe809</span></div>
+        <div class="the-icons span3" title="Code: 0xe80a"><i class="demo-icon wa-emo-displeased">&#xe80a;</i> <span class="i-name">was wa-emo-displeased</span><span class="i-code">0xe80a</span></div>
+        <div class="the-icons span3" title="Code: 0xe80b"><i class="demo-icon wa-mail">&#xe80b;</i> <span class="i-name">was wa-mail</span><span class="i-code">0xe80b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe80c"><i class="demo-icon wa-emo-grin">&#xe80c;</i> <span class="i-name">was wa-emo-grin</span><span class="i-code">0xe80c</span></div>
+        <div class="the-icons span3" title="Code: 0xe80d"><i class="demo-icon wa-emo-angry">&#xe80d;</i> <span class="i-name">was wa-emo-angry</span><span class="i-code">0xe80d</span></div>
+        <div class="the-icons span3" title="Code: 0xe80e"><i class="demo-icon wa-heart">&#xe80e;</i> <span class="i-name">was wa-heart</span><span class="i-code">0xe80e</span></div>
+        <div class="the-icons span3" title="Code: 0xe80f"><i class="demo-icon wa-emo-cry">&#xe80f;</i> <span class="i-name">was wa-emo-cry</span><span class="i-code">0xe80f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe810"><i class="demo-icon wa-heart-empty">&#xe810;</i> <span class="i-name">was wa-heart-empty</span><span class="i-code">0xe810</span></div>
+        <div class="the-icons span3" title="Code: 0xe811"><i class="demo-icon wa-emo-squint">&#xe811;</i> <span class="i-name">was wa-emo-squint</span><span class="i-code">0xe811</span></div>
+        <div class="the-icons span3" title="Code: 0xe812"><i class="demo-icon wa-emo-laugh">&#xe812;</i> <span class="i-name">was wa-emo-laugh</span><span class="i-code">0xe812</span></div>
+        <div class="the-icons span3" title="Code: 0xe813"><i class="demo-icon wa-emo-wink2">&#xe813;</i> <span class="i-name">was wa-emo-wink2</span><span class="i-code">0xe813</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe814"><i class="demo-icon wa-star">&#xe814;</i> <span class="i-name">was wa-star</span><span class="i-code">0xe814</span></div>
+        <div class="the-icons span3" title="Code: 0xe815"><i class="demo-icon wa-star-empty">&#xe815;</i> <span class="i-name">was wa-star-empty</span><span class="i-code">0xe815</span></div>
+        <div class="the-icons span3" title="Code: 0xe816"><i class="demo-icon wa-star-half">&#xe816;</i> <span class="i-name">was wa-star-half</span><span class="i-code">0xe816</span></div>
+        <div class="the-icons span3" title="Code: 0xe817"><i class="demo-icon wa-user">&#xe817;</i> <span class="i-name">was wa-user</span><span class="i-code">0xe817</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe818"><i class="demo-icon wa-users">&#xe818;</i> <span class="i-name">was wa-users</span><span class="i-code">0xe818</span></div>
+        <div class="the-icons span3" title="Code: 0xe819"><i class="demo-icon wa-videocam">&#xe819;</i> <span class="i-name">was wa-videocam</span><span class="i-code">0xe819</span></div>
+        <div class="the-icons span3" title="Code: 0xe81a"><i class="demo-icon wa-picture">&#xe81a;</i> <span class="i-name">was wa-picture</span><span class="i-code">0xe81a</span></div>
+        <div class="the-icons span3" title="Code: 0xe81b"><i class="demo-icon wa-camera">&#xe81b;</i> <span class="i-name">was wa-camera</span><span class="i-code">0xe81b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe81c"><i class="demo-icon wa-camera-alt">&#xe81c;</i> <span class="i-name">was wa-camera-alt</span><span class="i-code">0xe81c</span></div>
+        <div class="the-icons span3" title="Code: 0xe81d"><i class="demo-icon wa-th-large">&#xe81d;</i> <span class="i-name">was wa-th-large</span><span class="i-code">0xe81d</span></div>
+        <div class="the-icons span3" title="Code: 0xe81e"><i class="demo-icon wa-th">&#xe81e;</i> <span class="i-name">was wa-th</span><span class="i-code">0xe81e</span></div>
+        <div class="the-icons span3" title="Code: 0xe81f"><i class="demo-icon wa-th-list">&#xe81f;</i> <span class="i-name">was wa-th-list</span><span class="i-code">0xe81f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe820"><i class="demo-icon wa-ok">&#xe820;</i> <span class="i-name">was wa-ok</span><span class="i-code">0xe820</span></div>
+        <div class="the-icons span3" title="Code: 0xe821"><i class="demo-icon wa-ok-circled">&#xe821;</i> <span class="i-name">was wa-ok-circled</span><span class="i-code">0xe821</span></div>
+        <div class="the-icons span3" title="Code: 0xe822"><i class="demo-icon wa-ok-circled2">&#xe822;</i> <span class="i-name">was wa-ok-circled2</span><span class="i-code">0xe822</span></div>
+        <div class="the-icons span3" title="Code: 0xe823"><i class="demo-icon wa-cancel">&#xe823;</i> <span class="i-name">was wa-cancel</span><span class="i-code">0xe823</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe824"><i class="demo-icon wa-cancel-circled">&#xe824;</i> <span class="i-name">was wa-cancel-circled</span><span class="i-code">0xe824</span></div>
+        <div class="the-icons span3" title="Code: 0xe825"><i class="demo-icon wa-cancel-circled2">&#xe825;</i> <span class="i-name">was wa-cancel-circled2</span><span class="i-code">0xe825</span></div>
+        <div class="the-icons span3" title="Code: 0xe826"><i class="demo-icon wa-plus">&#xe826;</i> <span class="i-name">was wa-plus</span><span class="i-code">0xe826</span></div>
+        <div class="the-icons span3" title="Code: 0xe827"><i class="demo-icon wa-plus-circled">&#xe827;</i> <span class="i-name">was wa-plus-circled</span><span class="i-code">0xe827</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe828"><i class="demo-icon wa-minus">&#xe828;</i> <span class="i-name">was wa-minus</span><span class="i-code">0xe828</span></div>
+        <div class="the-icons span3" title="Code: 0xe829"><i class="demo-icon wa-minus-circled">&#xe829;</i> <span class="i-name">was wa-minus-circled</span><span class="i-code">0xe829</span></div>
+        <div class="the-icons span3" title="Code: 0xe82a"><i class="demo-icon wa-help-circled">&#xe82a;</i> <span class="i-name">was wa-help-circled</span><span class="i-code">0xe82a</span></div>
+        <div class="the-icons span3" title="Code: 0xe82b"><i class="demo-icon wa-info-circled">&#xe82b;</i> <span class="i-name">was wa-info-circled</span><span class="i-code">0xe82b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe82c"><i class="demo-icon wa-home">&#xe82c;</i> <span class="i-name">was wa-home</span><span class="i-code">0xe82c</span></div>
+        <div class="the-icons span3" title="Code: 0xe82d"><i class="demo-icon wa-link">&#xe82d;</i> <span class="i-name">was wa-link</span><span class="i-code">0xe82d</span></div>
+        <div class="the-icons span3" title="Code: 0xe82e"><i class="demo-icon wa-attach">&#xe82e;</i> <span class="i-name">was wa-attach</span><span class="i-code">0xe82e</span></div>
+        <div class="the-icons span3" title="Code: 0xe82f"><i class="demo-icon wa-lock">&#xe82f;</i> <span class="i-name">was wa-lock</span><span class="i-code">0xe82f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe830"><i class="demo-icon wa-spin1 animate-spin">&#xe830;</i> <span class="i-name">was wa-spin1</span><span class="i-code">0xe830</span></div>
+        <div class="the-icons span3" title="Code: 0xe831"><i class="demo-icon wa-spin2 animate-spin">&#xe831;</i> <span class="i-name">was wa-spin2</span><span class="i-code">0xe831</span></div>
+        <div class="the-icons span3" title="Code: 0xe832"><i class="demo-icon wa-spin3 animate-spin">&#xe832;</i> <span class="i-name">was wa-spin3</span><span class="i-code">0xe832</span></div>
+        <div class="the-icons span3" title="Code: 0xe833"><i class="demo-icon wa-lock-open">&#xe833;</i> <span class="i-name">was wa-lock-open</span><span class="i-code">0xe833</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe834"><i class="demo-icon wa-spin4 animate-spin">&#xe834;</i> <span class="i-name">was wa-spin4</span><span class="i-code">0xe834</span></div>
+        <div class="the-icons span3" title="Code: 0xe835"><i class="demo-icon wa-flag">&#xe835;</i> <span class="i-name">was wa-flag</span><span class="i-code">0xe835</span></div>
+        <div class="the-icons span3" title="Code: 0xe836"><i class="demo-icon wa-pin">&#xe836;</i> <span class="i-name">was wa-pin</span><span class="i-code">0xe836</span></div>
+        <div class="the-icons span3" title="Code: 0xe837"><i class="demo-icon wa-eye">&#xe837;</i> <span class="i-name">was wa-eye</span><span class="i-code">0xe837</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe838"><i class="demo-icon wa-spin5 animate-spin">&#xe838;</i> <span class="i-name">was wa-spin5</span><span class="i-code">0xe838</span></div>
+        <div class="the-icons span3" title="Code: 0xe839"><i class="demo-icon wa-spin6 animate-spin">&#xe839;</i> <span class="i-name">was wa-spin6</span><span class="i-code">0xe839</span></div>
+        <div class="the-icons span3" title="Code: 0xe83a"><i class="demo-icon wa-eye-off">&#xe83a;</i> <span class="i-name">was wa-eye-off</span><span class="i-code">0xe83a</span></div>
+        <div class="the-icons span3" title="Code: 0xe83b"><i class="demo-icon wa-tag">&#xe83b;</i> <span class="i-name">was wa-tag</span><span class="i-code">0xe83b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe83c"><i class="demo-icon wa-tags">&#xe83c;</i> <span class="i-name">was wa-tags</span><span class="i-code">0xe83c</span></div>
+        <div class="the-icons span3" title="Code: 0xe83d"><i class="demo-icon wa-bookmark">&#xe83d;</i> <span class="i-name">was wa-bookmark</span><span class="i-code">0xe83d</span></div>
+        <div class="the-icons span3" title="Code: 0xe83e"><i class="demo-icon wa-thumbs-up">&#xe83e;</i> <span class="i-name">was wa-thumbs-up</span><span class="i-code">0xe83e</span></div>
+        <div class="the-icons span3" title="Code: 0xe83f"><i class="demo-icon wa-thumbs-down">&#xe83f;</i> <span class="i-name">was wa-thumbs-down</span><span class="i-code">0xe83f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe840"><i class="demo-icon wa-firefox">&#xe840;</i> <span class="i-name">was wa-firefox</span><span class="i-code">0xe840</span></div>
+        <div class="the-icons span3" title="Code: 0xe841"><i class="demo-icon wa-chrome">&#xe841;</i> <span class="i-name">was wa-chrome</span><span class="i-code">0xe841</span></div>
+        <div class="the-icons span3" title="Code: 0xe842"><i class="demo-icon wa-opera">&#xe842;</i> <span class="i-name">was wa-opera</span><span class="i-code">0xe842</span></div>
+        <div class="the-icons span3" title="Code: 0xe843"><i class="demo-icon wa-ie">&#xe843;</i> <span class="i-name">was wa-ie</span><span class="i-code">0xe843</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe844"><i class="demo-icon wa-download">&#xe844;</i> <span class="i-name">was wa-download</span><span class="i-code">0xe844</span></div>
+        <div class="the-icons span3" title="Code: 0xe845"><i class="demo-icon wa-upload">&#xe845;</i> <span class="i-name">was wa-upload</span><span class="i-code">0xe845</span></div>
+        <div class="the-icons span3" title="Code: 0xe846"><i class="demo-icon wa-export">&#xe846;</i> <span class="i-name">was wa-export</span><span class="i-code">0xe846</span></div>
+        <div class="the-icons span3" title="Code: 0xe847"><i class="demo-icon wa-pencil">&#xe847;</i> <span class="i-name">was wa-pencil</span><span class="i-code">0xe847</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe848"><i class="demo-icon wa-forward">&#xe848;</i> <span class="i-name">was wa-forward</span><span class="i-code">0xe848</span></div>
+        <div class="the-icons span3" title="Code: 0xe849"><i class="demo-icon wa-edit">&#xe849;</i> <span class="i-name">was wa-edit</span><span class="i-code">0xe849</span></div>
+        <div class="the-icons span3" title="Code: 0xe84a"><i class="demo-icon wa-print">&#xe84a;</i> <span class="i-name">was wa-print</span><span class="i-code">0xe84a</span></div>
+        <div class="the-icons span3" title="Code: 0xe84b"><i class="demo-icon wa-retweet">&#xe84b;</i> <span class="i-name">was wa-retweet</span><span class="i-code">0xe84b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe84c"><i class="demo-icon wa-comment">&#xe84c;</i> <span class="i-name">was wa-comment</span><span class="i-code">0xe84c</span></div>
+        <div class="the-icons span3" title="Code: 0xe84d"><i class="demo-icon wa-chat">&#xe84d;</i> <span class="i-name">was wa-chat</span><span class="i-code">0xe84d</span></div>
+        <div class="the-icons span3" title="Code: 0xe84e"><i class="demo-icon wa-bell">&#xe84e;</i> <span class="i-name">was wa-bell</span><span class="i-code">0xe84e</span></div>
+        <div class="the-icons span3" title="Code: 0xe84f"><i class="demo-icon wa-attention">&#xe84f;</i> <span class="i-name">was wa-attention</span><span class="i-code">0xe84f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe850"><i class="demo-icon wa-attention-circled">&#xe850;</i> <span class="i-name">was wa-attention-circled</span><span class="i-code">0xe850</span></div>
+        <div class="the-icons span3" title="Code: 0xe851"><i class="demo-icon wa-location">&#xe851;</i> <span class="i-name">was wa-location</span><span class="i-code">0xe851</span></div>
+        <div class="the-icons span3" title="Code: 0xe852"><i class="demo-icon wa-trash-empty">&#xe852;</i> <span class="i-name">was wa-trash-empty</span><span class="i-code">0xe852</span></div>
+        <div class="the-icons span3" title="Code: 0xe853"><i class="demo-icon wa-doc">&#xe853;</i> <span class="i-name">was wa-doc</span><span class="i-code">0xe853</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe854"><i class="demo-icon wa-folder">&#xe854;</i> <span class="i-name">was wa-folder</span><span class="i-code">0xe854</span></div>
+        <div class="the-icons span3" title="Code: 0xe855"><i class="demo-icon wa-folder-open">&#xe855;</i> <span class="i-name">was wa-folder-open</span><span class="i-code">0xe855</span></div>
+        <div class="the-icons span3" title="Code: 0xe856"><i class="demo-icon wa-phone">&#xe856;</i> <span class="i-name">was wa-phone</span><span class="i-code">0xe856</span></div>
+        <div class="the-icons span3" title="Code: 0xe857"><i class="demo-icon wa-cog">&#xe857;</i> <span class="i-name">was wa-cog</span><span class="i-code">0xe857</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe858"><i class="demo-icon wa-cog-alt">&#xe858;</i> <span class="i-name">was wa-cog-alt</span><span class="i-code">0xe858</span></div>
+        <div class="the-icons span3" title="Code: 0xe859"><i class="demo-icon wa-wrench">&#xe859;</i> <span class="i-name">was wa-wrench</span><span class="i-code">0xe859</span></div>
+        <div class="the-icons span3" title="Code: 0xe85a"><i class="demo-icon wa-basket">&#xe85a;</i> <span class="i-name">was wa-basket</span><span class="i-code">0xe85a</span></div>
+        <div class="the-icons span3" title="Code: 0xe85b"><i class="demo-icon wa-calendar">&#xe85b;</i> <span class="i-name">was wa-calendar</span><span class="i-code">0xe85b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe85c"><i class="demo-icon wa-login">&#xe85c;</i> <span class="i-name">was wa-login</span><span class="i-code">0xe85c</span></div>
+        <div class="the-icons span3" title="Code: 0xe85d"><i class="demo-icon wa-logout">&#xe85d;</i> <span class="i-name">was wa-logout</span><span class="i-code">0xe85d</span></div>
+        <div class="the-icons span3" title="Code: 0xe85e"><i class="demo-icon wa-volume-off">&#xe85e;</i> <span class="i-name">was wa-volume-off</span><span class="i-code">0xe85e</span></div>
+        <div class="the-icons span3" title="Code: 0xe85f"><i class="demo-icon wa-volume-down">&#xe85f;</i> <span class="i-name">was wa-volume-down</span><span class="i-code">0xe85f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe860"><i class="demo-icon wa-volume-up">&#xe860;</i> <span class="i-name">was wa-volume-up</span><span class="i-code">0xe860</span></div>
+        <div class="the-icons span3" title="Code: 0xe861"><i class="demo-icon wa-clock">&#xe861;</i> <span class="i-name">was wa-clock</span><span class="i-code">0xe861</span></div>
+        <div class="the-icons span3" title="Code: 0xe862"><i class="demo-icon wa-shuffle">&#xe862;</i> <span class="i-name">was wa-shuffle</span><span class="i-code">0xe862</span></div>
+        <div class="the-icons span3" title="Code: 0xe863"><i class="demo-icon wa-resize-full">&#xe863;</i> <span class="i-name">was wa-resize-full</span><span class="i-code">0xe863</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe864"><i class="demo-icon wa-block">&#xe864;</i> <span class="i-name">was wa-block</span><span class="i-code">0xe864</span></div>
+        <div class="the-icons span3" title="Code: 0xe865"><i class="demo-icon wa-down-circled2">&#xe865;</i> <span class="i-name">was wa-down-circled2</span><span class="i-code">0xe865</span></div>
+        <div class="the-icons span3" title="Code: 0xe866"><i class="demo-icon wa-up-circled2">&#xe866;</i> <span class="i-name">was wa-up-circled2</span><span class="i-code">0xe866</span></div>
+        <div class="the-icons span3" title="Code: 0xe867"><i class="demo-icon wa-up-dir">&#xe867;</i> <span class="i-name">was wa-up-dir</span><span class="i-code">0xe867</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe868"><i class="demo-icon wa-left-dir">&#xe868;</i> <span class="i-name">was wa-left-dir</span><span class="i-code">0xe868</span></div>
+        <div class="the-icons span3" title="Code: 0xe869"><i class="demo-icon wa-right-dir">&#xe869;</i> <span class="i-name">was wa-right-dir</span><span class="i-code">0xe869</span></div>
+        <div class="the-icons span3" title="Code: 0xe86a"><i class="demo-icon wa-down-open">&#xe86a;</i> <span class="i-name">was wa-down-open</span><span class="i-code">0xe86a</span></div>
+        <div class="the-icons span3" title="Code: 0xe86b"><i class="demo-icon wa-left-open">&#xe86b;</i> <span class="i-name">was wa-left-open</span><span class="i-code">0xe86b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe86c"><i class="demo-icon wa-right-open">&#xe86c;</i> <span class="i-name">was wa-right-open</span><span class="i-code">0xe86c</span></div>
+        <div class="the-icons span3" title="Code: 0xe86d"><i class="demo-icon wa-up-open">&#xe86d;</i> <span class="i-name">was wa-up-open</span><span class="i-code">0xe86d</span></div>
+        <div class="the-icons span3" title="Code: 0xe86e"><i class="demo-icon wa-down-big">&#xe86e;</i> <span class="i-name">was wa-down-big</span><span class="i-code">0xe86e</span></div>
+        <div class="the-icons span3" title="Code: 0xe86f"><i class="demo-icon wa-left-big">&#xe86f;</i> <span class="i-name">was wa-left-big</span><span class="i-code">0xe86f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe870"><i class="demo-icon wa-right-big">&#xe870;</i> <span class="i-name">was wa-right-big</span><span class="i-code">0xe870</span></div>
+        <div class="the-icons span3" title="Code: 0xe871"><i class="demo-icon wa-up-big">&#xe871;</i> <span class="i-name">was wa-up-big</span><span class="i-code">0xe871</span></div>
+        <div class="the-icons span3" title="Code: 0xe872"><i class="demo-icon wa-right-hand">&#xe872;</i> <span class="i-name">was wa-right-hand</span><span class="i-code">0xe872</span></div>
+        <div class="the-icons span3" title="Code: 0xe873"><i class="demo-icon wa-left-hand">&#xe873;</i> <span class="i-name">was wa-left-hand</span><span class="i-code">0xe873</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe874"><i class="demo-icon wa-up-hand">&#xe874;</i> <span class="i-name">was wa-up-hand</span><span class="i-code">0xe874</span></div>
+        <div class="the-icons span3" title="Code: 0xe875"><i class="demo-icon wa-down-hand">&#xe875;</i> <span class="i-name">was wa-down-hand</span><span class="i-code">0xe875</span></div>
+        <div class="the-icons span3" title="Code: 0xe876"><i class="demo-icon wa-cw">&#xe876;</i> <span class="i-name">was wa-cw</span><span class="i-code">0xe876</span></div>
+        <div class="the-icons span3" title="Code: 0xe877"><i class="demo-icon wa-ccw">&#xe877;</i> <span class="i-name">was wa-ccw</span><span class="i-code">0xe877</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe878"><i class="demo-icon wa-play">&#xe878;</i> <span class="i-name">was wa-play</span><span class="i-code">0xe878</span></div>
+        <div class="the-icons span3" title="Code: 0xe879"><i class="demo-icon wa-play-circled2">&#xe879;</i> <span class="i-name">was wa-play-circled2</span><span class="i-code">0xe879</span></div>
+        <div class="the-icons span3" title="Code: 0xe87a"><i class="demo-icon wa-stop">&#xe87a;</i> <span class="i-name">was wa-stop</span><span class="i-code">0xe87a</span></div>
+        <div class="the-icons span3" title="Code: 0xe87b"><i class="demo-icon wa-pause">&#xe87b;</i> <span class="i-name">was wa-pause</span><span class="i-code">0xe87b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe87c"><i class="demo-icon wa-to-end">&#xe87c;</i> <span class="i-name">was wa-to-end</span><span class="i-code">0xe87c</span></div>
+        <div class="the-icons span3" title="Code: 0xe87d"><i class="demo-icon wa-to-end-alt">&#xe87d;</i> <span class="i-name">was wa-to-end-alt</span><span class="i-code">0xe87d</span></div>
+        <div class="the-icons span3" title="Code: 0xe87e"><i class="demo-icon wa-to-start">&#xe87e;</i> <span class="i-name">was wa-to-start</span><span class="i-code">0xe87e</span></div>
+        <div class="the-icons span3" title="Code: 0xe87f"><i class="demo-icon wa-to-start-alt">&#xe87f;</i> <span class="i-name">was wa-to-start-alt</span><span class="i-code">0xe87f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe880"><i class="demo-icon wa-fast-fw">&#xe880;</i> <span class="i-name">was wa-fast-fw</span><span class="i-code">0xe880</span></div>
+        <div class="the-icons span3" title="Code: 0xe881"><i class="demo-icon wa-fast-bw">&#xe881;</i> <span class="i-name">was wa-fast-bw</span><span class="i-code">0xe881</span></div>
+        <div class="the-icons span3" title="Code: 0xe882"><i class="demo-icon wa-eject">&#xe882;</i> <span class="i-name">was wa-eject</span><span class="i-code">0xe882</span></div>
+        <div class="the-icons span3" title="Code: 0xe883"><i class="demo-icon wa-signal">&#xe883;</i> <span class="i-name">was wa-signal</span><span class="i-code">0xe883</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe884"><i class="demo-icon wa-inbox">&#xe884;</i> <span class="i-name">was wa-inbox</span><span class="i-code">0xe884</span></div>
+        <div class="the-icons span3" title="Code: 0xe885"><i class="demo-icon wa-globe">&#xe885;</i> <span class="i-name">was wa-globe</span><span class="i-code">0xe885</span></div>
+        <div class="the-icons span3" title="Code: 0xe886"><i class="demo-icon wa-cloud">&#xe886;</i> <span class="i-name">was wa-cloud</span><span class="i-code">0xe886</span></div>
+        <div class="the-icons span3" title="Code: 0xe887"><i class="demo-icon wa-flash">&#xe887;</i> <span class="i-name">was wa-flash</span><span class="i-code">0xe887</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe888"><i class="demo-icon wa-umbrella">&#xe888;</i> <span class="i-name">was wa-umbrella</span><span class="i-code">0xe888</span></div>
+        <div class="the-icons span3" title="Code: 0xe889"><i class="demo-icon wa-flight">&#xe889;</i> <span class="i-name">was wa-flight</span><span class="i-code">0xe889</span></div>
+        <div class="the-icons span3" title="Code: 0xe88a"><i class="demo-icon wa-leaf">&#xe88a;</i> <span class="i-name">was wa-leaf</span><span class="i-code">0xe88a</span></div>
+        <div class="the-icons span3" title="Code: 0xe88b"><i class="demo-icon wa-book">&#xe88b;</i> <span class="i-name">was wa-book</span><span class="i-code">0xe88b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe88c"><i class="demo-icon wa-note">&#xe88c;</i> <span class="i-name">was wa-note</span><span class="i-code">0xe88c</span></div>
+        <div class="the-icons span3" title="Code: 0xe88d"><i class="demo-icon wa-note-beamed">&#xe88d;</i> <span class="i-name">was wa-note-beamed</span><span class="i-code">0xe88d</span></div>
+        <div class="the-icons span3" title="Code: 0xe88e"><i class="demo-icon wa-music">&#xe88e;</i> <span class="i-name">was wa-music</span><span class="i-code">0xe88e</span></div>
+        <div class="the-icons span3" title="Code: 0xe88f"><i class="demo-icon wa-search-1">&#xe88f;</i> <span class="i-name">was wa-search-1</span><span class="i-code">0xe88f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe890"><i class="demo-icon wa-flashlight">&#xe890;</i> <span class="i-name">was wa-flashlight</span><span class="i-code">0xe890</span></div>
+        <div class="the-icons span3" title="Code: 0xe891"><i class="demo-icon wa-mail-1">&#xe891;</i> <span class="i-name">was wa-mail-1</span><span class="i-code">0xe891</span></div>
+        <div class="the-icons span3" title="Code: 0xe892"><i class="demo-icon wa-heart-1">&#xe892;</i> <span class="i-name">was wa-heart-1</span><span class="i-code">0xe892</span></div>
+        <div class="the-icons span3" title="Code: 0xe893"><i class="demo-icon wa-heart-empty-1">&#xe893;</i> <span class="i-name">was wa-heart-empty-1</span><span class="i-code">0xe893</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe894"><i class="demo-icon wa-star-1">&#xe894;</i> <span class="i-name">was wa-star-1</span><span class="i-code">0xe894</span></div>
+        <div class="the-icons span3" title="Code: 0xe895"><i class="demo-icon wa-star-empty-1">&#xe895;</i> <span class="i-name">was wa-star-empty-1</span><span class="i-code">0xe895</span></div>
+        <div class="the-icons span3" title="Code: 0xe896"><i class="demo-icon wa-user-1">&#xe896;</i> <span class="i-name">was wa-user-1</span><span class="i-code">0xe896</span></div>
+        <div class="the-icons span3" title="Code: 0xe897"><i class="demo-icon wa-users-1">&#xe897;</i> <span class="i-name">was wa-users-1</span><span class="i-code">0xe897</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe898"><i class="demo-icon wa-user-add">&#xe898;</i> <span class="i-name">was wa-user-add</span><span class="i-code">0xe898</span></div>
+        <div class="the-icons span3" title="Code: 0xe899"><i class="demo-icon wa-video">&#xe899;</i> <span class="i-name">was wa-video</span><span class="i-code">0xe899</span></div>
+        <div class="the-icons span3" title="Code: 0xe89a"><i class="demo-icon wa-picture-1">&#xe89a;</i> <span class="i-name">was wa-picture-1</span><span class="i-code">0xe89a</span></div>
+        <div class="the-icons span3" title="Code: 0xe89b"><i class="demo-icon wa-camera-1">&#xe89b;</i> <span class="i-name">was wa-camera-1</span><span class="i-code">0xe89b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe89c"><i class="demo-icon wa-layout">&#xe89c;</i> <span class="i-name">was wa-layout</span><span class="i-code">0xe89c</span></div>
+        <div class="the-icons span3" title="Code: 0xe89d"><i class="demo-icon wa-menu-1">&#xe89d;</i> <span class="i-name">was wa-menu-1</span><span class="i-code">0xe89d</span></div>
+        <div class="the-icons span3" title="Code: 0xe89e"><i class="demo-icon wa-check">&#xe89e;</i> <span class="i-name">was wa-check</span><span class="i-code">0xe89e</span></div>
+        <div class="the-icons span3" title="Code: 0xe89f"><i class="demo-icon wa-cancel-1">&#xe89f;</i> <span class="i-name">was wa-cancel-1</span><span class="i-code">0xe89f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a0"><i class="demo-icon wa-cancel-circled-1">&#xe8a0;</i> <span class="i-name">was wa-cancel-circled-1</span><span class="i-code">0xe8a0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a1"><i class="demo-icon wa-cancel-squared">&#xe8a1;</i> <span class="i-name">was wa-cancel-squared</span><span class="i-code">0xe8a1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a2"><i class="demo-icon wa-plus-1">&#xe8a2;</i> <span class="i-name">was wa-plus-1</span><span class="i-code">0xe8a2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a3"><i class="demo-icon wa-plus-circled-1">&#xe8a3;</i> <span class="i-name">was wa-plus-circled-1</span><span class="i-code">0xe8a3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a4"><i class="demo-icon wa-plus-squared-1">&#xe8a4;</i> <span class="i-name">was wa-plus-squared-1</span><span class="i-code">0xe8a4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a5"><i class="demo-icon wa-minus-1">&#xe8a5;</i> <span class="i-name">was wa-minus-1</span><span class="i-code">0xe8a5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a6"><i class="demo-icon wa-minus-circled-1">&#xe8a6;</i> <span class="i-name">was wa-minus-circled-1</span><span class="i-code">0xe8a6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a7"><i class="demo-icon wa-minus-squared-1">&#xe8a7;</i> <span class="i-name">was wa-minus-squared-1</span><span class="i-code">0xe8a7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a8"><i class="demo-icon wa-help-1">&#xe8a8;</i> <span class="i-name">was wa-help-1</span><span class="i-code">0xe8a8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a9"><i class="demo-icon wa-help-circled-1">&#xe8a9;</i> <span class="i-name">was wa-help-circled-1</span><span class="i-code">0xe8a9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8aa"><i class="demo-icon wa-info-1">&#xe8aa;</i> <span class="i-name">was wa-info-1</span><span class="i-code">0xe8aa</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ab"><i class="demo-icon wa-info-circled-1">&#xe8ab;</i> <span class="i-name">was wa-info-circled-1</span><span class="i-code">0xe8ab</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8ac"><i class="demo-icon wa-back">&#xe8ac;</i> <span class="i-name">was wa-back</span><span class="i-code">0xe8ac</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ad"><i class="demo-icon wa-home-1">&#xe8ad;</i> <span class="i-name">was wa-home-1</span><span class="i-code">0xe8ad</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ae"><i class="demo-icon wa-link-1">&#xe8ae;</i> <span class="i-name">was wa-link-1</span><span class="i-code">0xe8ae</span></div>
+        <div class="the-icons span3" title="Code: 0xe8af"><i class="demo-icon wa-attach-1">&#xe8af;</i> <span class="i-name">was wa-attach-1</span><span class="i-code">0xe8af</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b0"><i class="demo-icon wa-lock-1">&#xe8b0;</i> <span class="i-name">was wa-lock-1</span><span class="i-code">0xe8b0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b1"><i class="demo-icon wa-lock-open-1">&#xe8b1;</i> <span class="i-name">was wa-lock-open-1</span><span class="i-code">0xe8b1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b2"><i class="demo-icon wa-eye-1">&#xe8b2;</i> <span class="i-name">was wa-eye-1</span><span class="i-code">0xe8b2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b3"><i class="demo-icon wa-tag-1">&#xe8b3;</i> <span class="i-name">was wa-tag-1</span><span class="i-code">0xe8b3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b4"><i class="demo-icon wa-bookmark-1">&#xe8b4;</i> <span class="i-name">was wa-bookmark-1</span><span class="i-code">0xe8b4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b5"><i class="demo-icon wa-bookmarks">&#xe8b5;</i> <span class="i-name">was wa-bookmarks</span><span class="i-code">0xe8b5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b6"><i class="demo-icon wa-flag-1">&#xe8b6;</i> <span class="i-name">was wa-flag-1</span><span class="i-code">0xe8b6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b7"><i class="demo-icon wa-thumbs-up-1">&#xe8b7;</i> <span class="i-name">was wa-thumbs-up-1</span><span class="i-code">0xe8b7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b8"><i class="demo-icon wa-thumbs-down-1">&#xe8b8;</i> <span class="i-name">was wa-thumbs-down-1</span><span class="i-code">0xe8b8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b9"><i class="demo-icon wa-download-1">&#xe8b9;</i> <span class="i-name">was wa-download-1</span><span class="i-code">0xe8b9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ba"><i class="demo-icon wa-upload-1">&#xe8ba;</i> <span class="i-name">was wa-upload-1</span><span class="i-code">0xe8ba</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bb"><i class="demo-icon wa-upload-cloud-1">&#xe8bb;</i> <span class="i-name">was wa-upload-cloud-1</span><span class="i-code">0xe8bb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8bc"><i class="demo-icon wa-reply-1">&#xe8bc;</i> <span class="i-name">was wa-reply-1</span><span class="i-code">0xe8bc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bd"><i class="demo-icon wa-reply-all-1">&#xe8bd;</i> <span class="i-name">was wa-reply-all-1</span><span class="i-code">0xe8bd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8be"><i class="demo-icon wa-forward-1">&#xe8be;</i> <span class="i-name">was wa-forward-1</span><span class="i-code">0xe8be</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bf"><i class="demo-icon wa-quote">&#xe8bf;</i> <span class="i-name">was wa-quote</span><span class="i-code">0xe8bf</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c0"><i class="demo-icon wa-code-1">&#xe8c0;</i> <span class="i-name">was wa-code-1</span><span class="i-code">0xe8c0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c1"><i class="demo-icon wa-export-1">&#xe8c1;</i> <span class="i-name">was wa-export-1</span><span class="i-code">0xe8c1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c2"><i class="demo-icon wa-pencil-1">&#xe8c2;</i> <span class="i-name">was wa-pencil-1</span><span class="i-code">0xe8c2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c3"><i class="demo-icon wa-feather">&#xe8c3;</i> <span class="i-name">was wa-feather</span><span class="i-code">0xe8c3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c4"><i class="demo-icon wa-print-1">&#xe8c4;</i> <span class="i-name">was wa-print-1</span><span class="i-code">0xe8c4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c5"><i class="demo-icon wa-retweet-1">&#xe8c5;</i> <span class="i-name">was wa-retweet-1</span><span class="i-code">0xe8c5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c6"><i class="demo-icon wa-keyboard-1">&#xe8c6;</i> <span class="i-name">was wa-keyboard-1</span><span class="i-code">0xe8c6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c7"><i class="demo-icon wa-comment-1">&#xe8c7;</i> <span class="i-name">was wa-comment-1</span><span class="i-code">0xe8c7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c8"><i class="demo-icon wa-chat-1">&#xe8c8;</i> <span class="i-name">was wa-chat-1</span><span class="i-code">0xe8c8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c9"><i class="demo-icon wa-bell-1">&#xe8c9;</i> <span class="i-name">was wa-bell-1</span><span class="i-code">0xe8c9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ca"><i class="demo-icon wa-attention-1">&#xe8ca;</i> <span class="i-name">was wa-attention-1</span><span class="i-code">0xe8ca</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cb"><i class="demo-icon wa-alert">&#xe8cb;</i> <span class="i-name">was wa-alert</span><span class="i-code">0xe8cb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8cc"><i class="demo-icon wa-vcard">&#xe8cc;</i> <span class="i-name">was wa-vcard</span><span class="i-code">0xe8cc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cd"><i class="demo-icon wa-address">&#xe8cd;</i> <span class="i-name">was wa-address</span><span class="i-code">0xe8cd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ce"><i class="demo-icon wa-location-1">&#xe8ce;</i> <span class="i-name">was wa-location-1</span><span class="i-code">0xe8ce</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cf"><i class="demo-icon wa-map">&#xe8cf;</i> <span class="i-name">was wa-map</span><span class="i-code">0xe8cf</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8d0"><i class="demo-icon wa-direction-1">&#xe8d0;</i> <span class="i-name">was wa-direction-1</span><span class="i-code">0xe8d0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d1"><i class="demo-icon wa-compass-1">&#xe8d1;</i> <span class="i-name">was wa-compass-1</span><span class="i-code">0xe8d1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d2"><i class="demo-icon wa-cup">&#xe8d2;</i> <span class="i-name">was wa-cup</span><span class="i-code">0xe8d2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d3"><i class="demo-icon wa-trash-1">&#xe8d3;</i> <span class="i-name">was wa-trash-1</span><span class="i-code">0xe8d3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8d4"><i class="demo-icon wa-doc-1">&#xe8d4;</i> <span class="i-name">was wa-doc-1</span><span class="i-code">0xe8d4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d5"><i class="demo-icon wa-docs-1">&#xe8d5;</i> <span class="i-name">was wa-docs-1</span><span class="i-code">0xe8d5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d6"><i class="demo-icon wa-doc-landscape">&#xe8d6;</i> <span class="i-name">was wa-doc-landscape</span><span class="i-code">0xe8d6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d7"><i class="demo-icon wa-doc-text-1">&#xe8d7;</i> <span class="i-name">was wa-doc-text-1</span><span class="i-code">0xe8d7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8d8"><i class="demo-icon wa-doc-text-inv-1">&#xe8d8;</i> <span class="i-name">was wa-doc-text-inv-1</span><span class="i-code">0xe8d8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d9"><i class="demo-icon wa-newspaper">&#xe8d9;</i> <span class="i-name">was wa-newspaper</span><span class="i-code">0xe8d9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8da"><i class="demo-icon wa-book-open">&#xe8da;</i> <span class="i-name">was wa-book-open</span><span class="i-code">0xe8da</span></div>
+        <div class="the-icons span3" title="Code: 0xe8db"><i class="demo-icon wa-book-1">&#xe8db;</i> <span class="i-name">was wa-book-1</span><span class="i-code">0xe8db</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8dc"><i class="demo-icon wa-folder-1">&#xe8dc;</i> <span class="i-name">was wa-folder-1</span><span class="i-code">0xe8dc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8dd"><i class="demo-icon wa-archive">&#xe8dd;</i> <span class="i-name">was wa-archive</span><span class="i-code">0xe8dd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8de"><i class="demo-icon wa-box-1">&#xe8de;</i> <span class="i-name">was wa-box-1</span><span class="i-code">0xe8de</span></div>
+        <div class="the-icons span3" title="Code: 0xe8df"><i class="demo-icon wa-rss-1">&#xe8df;</i> <span class="i-name">was wa-rss-1</span><span class="i-code">0xe8df</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8e0"><i class="demo-icon wa-phone-1">&#xe8e0;</i> <span class="i-name">was wa-phone-1</span><span class="i-code">0xe8e0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e1"><i class="demo-icon wa-cog-1">&#xe8e1;</i> <span class="i-name">was wa-cog-1</span><span class="i-code">0xe8e1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e2"><i class="demo-icon wa-tools">&#xe8e2;</i> <span class="i-name">was wa-tools</span><span class="i-code">0xe8e2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e3"><i class="demo-icon wa-share-1">&#xe8e3;</i> <span class="i-name">was wa-share-1</span><span class="i-code">0xe8e3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8e4"><i class="demo-icon wa-shareable">&#xe8e4;</i> <span class="i-name">was wa-shareable</span><span class="i-code">0xe8e4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e5"><i class="demo-icon wa-basket-1">&#xe8e5;</i> <span class="i-name">was wa-basket-1</span><span class="i-code">0xe8e5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e6"><i class="demo-icon wa-bag">&#xe8e6;</i> <span class="i-name">was wa-bag</span><span class="i-code">0xe8e6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e7"><i class="demo-icon wa-calendar-1">&#xe8e7;</i> <span class="i-name">was wa-calendar-1</span><span class="i-code">0xe8e7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8e8"><i class="demo-icon wa-login-1">&#xe8e8;</i> <span class="i-name">was wa-login-1</span><span class="i-code">0xe8e8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e9"><i class="demo-icon wa-logout-1">&#xe8e9;</i> <span class="i-name">was wa-logout-1</span><span class="i-code">0xe8e9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ea"><i class="demo-icon wa-mic-1">&#xe8ea;</i> <span class="i-name">was wa-mic-1</span><span class="i-code">0xe8ea</span></div>
+        <div class="the-icons span3" title="Code: 0xe8eb"><i class="demo-icon wa-mute-1">&#xe8eb;</i> <span class="i-name">was wa-mute-1</span><span class="i-code">0xe8eb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8ec"><i class="demo-icon wa-sound">&#xe8ec;</i> <span class="i-name">was wa-sound</span><span class="i-code">0xe8ec</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ed"><i class="demo-icon wa-volume">&#xe8ed;</i> <span class="i-name">was wa-volume</span><span class="i-code">0xe8ed</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ee"><i class="demo-icon wa-clock-1">&#xe8ee;</i> <span class="i-name">was wa-clock-1</span><span class="i-code">0xe8ee</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ef"><i class="demo-icon wa-hourglass">&#xe8ef;</i> <span class="i-name">was wa-hourglass</span><span class="i-code">0xe8ef</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8f0"><i class="demo-icon wa-lamp">&#xe8f0;</i> <span class="i-name">was wa-lamp</span><span class="i-code">0xe8f0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f1"><i class="demo-icon wa-light-down">&#xe8f1;</i> <span class="i-name">was wa-light-down</span><span class="i-code">0xe8f1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f2"><i class="demo-icon wa-light-up">&#xe8f2;</i> <span class="i-name">was wa-light-up</span><span class="i-code">0xe8f2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f3"><i class="demo-icon wa-adjust">&#xe8f3;</i> <span class="i-name">was wa-adjust</span><span class="i-code">0xe8f3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8f4"><i class="demo-icon wa-block-1">&#xe8f4;</i> <span class="i-name">was wa-block-1</span><span class="i-code">0xe8f4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f5"><i class="demo-icon wa-resize-full-1">&#xe8f5;</i> <span class="i-name">was wa-resize-full-1</span><span class="i-code">0xe8f5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f6"><i class="demo-icon wa-resize-small">&#xe8f6;</i> <span class="i-name">was wa-resize-small</span><span class="i-code">0xe8f6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f7"><i class="demo-icon wa-popup">&#xe8f7;</i> <span class="i-name">was wa-popup</span><span class="i-code">0xe8f7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8f8"><i class="demo-icon wa-publish">&#xe8f8;</i> <span class="i-name">was wa-publish</span><span class="i-code">0xe8f8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f9"><i class="demo-icon wa-window">&#xe8f9;</i> <span class="i-name">was wa-window</span><span class="i-code">0xe8f9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fa"><i class="demo-icon wa-arrow-combo">&#xe8fa;</i> <span class="i-name">was wa-arrow-combo</span><span class="i-code">0xe8fa</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fb"><i class="demo-icon wa-down-circled-1">&#xe8fb;</i> <span class="i-name">was wa-down-circled-1</span><span class="i-code">0xe8fb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8fc"><i class="demo-icon wa-left-circled-1">&#xe8fc;</i> <span class="i-name">was wa-left-circled-1</span><span class="i-code">0xe8fc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fd"><i class="demo-icon wa-right-circled-1">&#xe8fd;</i> <span class="i-name">was wa-right-circled-1</span><span class="i-code">0xe8fd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fe"><i class="demo-icon wa-up-circled-1">&#xe8fe;</i> <span class="i-name">was wa-up-circled-1</span><span class="i-code">0xe8fe</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ff"><i class="demo-icon wa-down-open-1">&#xe8ff;</i> <span class="i-name">was wa-down-open-1</span><span class="i-code">0xe8ff</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe900"><i class="demo-icon wa-left-open-1">&#xe900;</i> <span class="i-name">was wa-left-open-1</span><span class="i-code">0xe900</span></div>
+        <div class="the-icons span3" title="Code: 0xe901"><i class="demo-icon wa-right-open-1">&#xe901;</i> <span class="i-name">was wa-right-open-1</span><span class="i-code">0xe901</span></div>
+        <div class="the-icons span3" title="Code: 0xe902"><i class="demo-icon wa-up-open-1">&#xe902;</i> <span class="i-name">was wa-up-open-1</span><span class="i-code">0xe902</span></div>
+        <div class="the-icons span3" title="Code: 0xe903"><i class="demo-icon wa-down-open-mini">&#xe903;</i> <span class="i-name">was wa-down-open-mini</span><span class="i-code">0xe903</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe904"><i class="demo-icon wa-left-open-mini">&#xe904;</i> <span class="i-name">was wa-left-open-mini</span><span class="i-code">0xe904</span></div>
+        <div class="the-icons span3" title="Code: 0xe905"><i class="demo-icon wa-right-open-mini">&#xe905;</i> <span class="i-name">was wa-right-open-mini</span><span class="i-code">0xe905</span></div>
+        <div class="the-icons span3" title="Code: 0xe906"><i class="demo-icon wa-up-open-mini">&#xe906;</i> <span class="i-name">was wa-up-open-mini</span><span class="i-code">0xe906</span></div>
+        <div class="the-icons span3" title="Code: 0xe907"><i class="demo-icon wa-down-open-big">&#xe907;</i> <span class="i-name">was wa-down-open-big</span><span class="i-code">0xe907</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe908"><i class="demo-icon wa-left-open-big">&#xe908;</i> <span class="i-name">was wa-left-open-big</span><span class="i-code">0xe908</span></div>
+        <div class="the-icons span3" title="Code: 0xe909"><i class="demo-icon wa-right-open-big">&#xe909;</i> <span class="i-name">was wa-right-open-big</span><span class="i-code">0xe909</span></div>
+        <div class="the-icons span3" title="Code: 0xe90a"><i class="demo-icon wa-up-open-big">&#xe90a;</i> <span class="i-name">was wa-up-open-big</span><span class="i-code">0xe90a</span></div>
+        <div class="the-icons span3" title="Code: 0xe90b"><i class="demo-icon wa-down-1">&#xe90b;</i> <span class="i-name">was wa-down-1</span><span class="i-code">0xe90b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe90c"><i class="demo-icon wa-left-1">&#xe90c;</i> <span class="i-name">was wa-left-1</span><span class="i-code">0xe90c</span></div>
+        <div class="the-icons span3" title="Code: 0xe90d"><i class="demo-icon wa-right-1">&#xe90d;</i> <span class="i-name">was wa-right-1</span><span class="i-code">0xe90d</span></div>
+        <div class="the-icons span3" title="Code: 0xe90e"><i class="demo-icon wa-up-1">&#xe90e;</i> <span class="i-name">was wa-up-1</span><span class="i-code">0xe90e</span></div>
+        <div class="the-icons span3" title="Code: 0xe90f"><i class="demo-icon wa-down-dir">&#xe90f;</i> <span class="i-name">was wa-down-dir</span><span class="i-code">0xe90f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe910"><i class="demo-icon wa-left-dir-1">&#xe910;</i> <span class="i-name">was wa-left-dir-1</span><span class="i-code">0xe910</span></div>
+        <div class="the-icons span3" title="Code: 0xe911"><i class="demo-icon wa-right-dir-1">&#xe911;</i> <span class="i-name">was wa-right-dir-1</span><span class="i-code">0xe911</span></div>
+        <div class="the-icons span3" title="Code: 0xe912"><i class="demo-icon wa-up-dir-1">&#xe912;</i> <span class="i-name">was wa-up-dir-1</span><span class="i-code">0xe912</span></div>
+        <div class="the-icons span3" title="Code: 0xe913"><i class="demo-icon wa-down-bold">&#xe913;</i> <span class="i-name">was wa-down-bold</span><span class="i-code">0xe913</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe914"><i class="demo-icon wa-left-bold">&#xe914;</i> <span class="i-name">was wa-left-bold</span><span class="i-code">0xe914</span></div>
+        <div class="the-icons span3" title="Code: 0xe915"><i class="demo-icon wa-right-bold">&#xe915;</i> <span class="i-name">was wa-right-bold</span><span class="i-code">0xe915</span></div>
+        <div class="the-icons span3" title="Code: 0xe916"><i class="demo-icon wa-up-bold">&#xe916;</i> <span class="i-name">was wa-up-bold</span><span class="i-code">0xe916</span></div>
+        <div class="the-icons span3" title="Code: 0xe917"><i class="demo-icon wa-down-thin">&#xe917;</i> <span class="i-name">was wa-down-thin</span><span class="i-code">0xe917</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe918"><i class="demo-icon wa-left-thin">&#xe918;</i> <span class="i-name">was wa-left-thin</span><span class="i-code">0xe918</span></div>
+        <div class="the-icons span3" title="Code: 0xe919"><i class="demo-icon wa-right-thin">&#xe919;</i> <span class="i-name">was wa-right-thin</span><span class="i-code">0xe919</span></div>
+        <div class="the-icons span3" title="Code: 0xe91a"><i class="demo-icon wa-up-thin">&#xe91a;</i> <span class="i-name">was wa-up-thin</span><span class="i-code">0xe91a</span></div>
+        <div class="the-icons span3" title="Code: 0xe91b"><i class="demo-icon wa-ccw-1">&#xe91b;</i> <span class="i-name">was wa-ccw-1</span><span class="i-code">0xe91b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe91c"><i class="demo-icon wa-cw-1">&#xe91c;</i> <span class="i-name">was wa-cw-1</span><span class="i-code">0xe91c</span></div>
+        <div class="the-icons span3" title="Code: 0xe91d"><i class="demo-icon wa-arrows-ccw">&#xe91d;</i> <span class="i-name">was wa-arrows-ccw</span><span class="i-code">0xe91d</span></div>
+        <div class="the-icons span3" title="Code: 0xe91e"><i class="demo-icon wa-level-down-1">&#xe91e;</i> <span class="i-name">was wa-level-down-1</span><span class="i-code">0xe91e</span></div>
+        <div class="the-icons span3" title="Code: 0xe91f"><i class="demo-icon wa-level-up-1">&#xe91f;</i> <span class="i-name">was wa-level-up-1</span><span class="i-code">0xe91f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe920"><i class="demo-icon wa-shuffle-1">&#xe920;</i> <span class="i-name">was wa-shuffle-1</span><span class="i-code">0xe920</span></div>
+        <div class="the-icons span3" title="Code: 0xe921"><i class="demo-icon wa-loop">&#xe921;</i> <span class="i-name">was wa-loop</span><span class="i-code">0xe921</span></div>
+        <div class="the-icons span3" title="Code: 0xe922"><i class="demo-icon wa-switch">&#xe922;</i> <span class="i-name">was wa-switch</span><span class="i-code">0xe922</span></div>
+        <div class="the-icons span3" title="Code: 0xe923"><i class="demo-icon wa-play-1">&#xe923;</i> <span class="i-name">was wa-play-1</span><span class="i-code">0xe923</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe924"><i class="demo-icon wa-stop-1">&#xe924;</i> <span class="i-name">was wa-stop-1</span><span class="i-code">0xe924</span></div>
+        <div class="the-icons span3" title="Code: 0xe925"><i class="demo-icon wa-pause-1">&#xe925;</i> <span class="i-name">was wa-pause-1</span><span class="i-code">0xe925</span></div>
+        <div class="the-icons span3" title="Code: 0xe926"><i class="demo-icon wa-record">&#xe926;</i> <span class="i-name">was wa-record</span><span class="i-code">0xe926</span></div>
+        <div class="the-icons span3" title="Code: 0xe927"><i class="demo-icon wa-to-end-1">&#xe927;</i> <span class="i-name">was wa-to-end-1</span><span class="i-code">0xe927</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe928"><i class="demo-icon wa-to-start-1">&#xe928;</i> <span class="i-name">was wa-to-start-1</span><span class="i-code">0xe928</span></div>
+        <div class="the-icons span3" title="Code: 0xe929"><i class="demo-icon wa-fast-forward">&#xe929;</i> <span class="i-name">was wa-fast-forward</span><span class="i-code">0xe929</span></div>
+        <div class="the-icons span3" title="Code: 0xe92a"><i class="demo-icon wa-fast-backward">&#xe92a;</i> <span class="i-name">was wa-fast-backward</span><span class="i-code">0xe92a</span></div>
+        <div class="the-icons span3" title="Code: 0xe92b"><i class="demo-icon wa-progress-0">&#xe92b;</i> <span class="i-name">was wa-progress-0</span><span class="i-code">0xe92b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe92c"><i class="demo-icon wa-progress-1">&#xe92c;</i> <span class="i-name">was wa-progress-1</span><span class="i-code">0xe92c</span></div>
+        <div class="the-icons span3" title="Code: 0xe92d"><i class="demo-icon wa-progress-2">&#xe92d;</i> <span class="i-name">was wa-progress-2</span><span class="i-code">0xe92d</span></div>
+        <div class="the-icons span3" title="Code: 0xe92e"><i class="demo-icon wa-progress-3">&#xe92e;</i> <span class="i-name">was wa-progress-3</span><span class="i-code">0xe92e</span></div>
+        <div class="the-icons span3" title="Code: 0xe92f"><i class="demo-icon wa-windows">&#xe92f;</i> <span class="i-name">was wa-windows</span><span class="i-code">0xe92f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe930"><i class="demo-icon wa-chrome-2">&#xe930;</i> <span class="i-name">was wa-chrome-2</span><span class="i-code">0xe930</span></div>
+        <div class="the-icons span3" title="Code: 0xe931"><i class="demo-icon wa-github">&#xe931;</i> <span class="i-name">was wa-github</span><span class="i-code">0xe931</span></div>
+        <div class="the-icons span3" title="Code: 0xe932"><i class="demo-icon wa-github-circled">&#xe932;</i> <span class="i-name">was wa-github-circled</span><span class="i-code">0xe932</span></div>
+        <div class="the-icons span3" title="Code: 0xe933"><i class="demo-icon wa-amazon">&#xe933;</i> <span class="i-name">was wa-amazon</span><span class="i-code">0xe933</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe934"><i class="demo-icon wa-steam">&#xe934;</i> <span class="i-name">was wa-steam</span><span class="i-code">0xe934</span></div>
+        <div class="the-icons span3" title="Code: 0xe935"><i class="demo-icon wa-dropbox">&#xe935;</i> <span class="i-name">was wa-dropbox</span><span class="i-code">0xe935</span></div>
+        <div class="the-icons span3" title="Code: 0xe936"><i class="demo-icon wa-facebook">&#xe936;</i> <span class="i-name">was wa-facebook</span><span class="i-code">0xe936</span></div>
+        <div class="the-icons span3" title="Code: 0xe937"><i class="demo-icon wa-yahoo">&#xe937;</i> <span class="i-name">was wa-yahoo</span><span class="i-code">0xe937</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe938"><i class="demo-icon wa-youtube">&#xe938;</i> <span class="i-name">was wa-youtube</span><span class="i-code">0xe938</span></div>
+        <div class="the-icons span3" title="Code: 0xe939"><i class="demo-icon wa-twitter">&#xe939;</i> <span class="i-name">was wa-twitter</span><span class="i-code">0xe939</span></div>
+        <div class="the-icons span3" title="Code: 0xe93a"><i class="demo-icon wa-skype">&#xe93a;</i> <span class="i-name">was wa-skype</span><span class="i-code">0xe93a</span></div>
+        <div class="the-icons span3" title="Code: 0xe93b"><i class="demo-icon wa-gmail">&#xe93b;</i> <span class="i-name">was wa-gmail</span><span class="i-code">0xe93b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe93c"><i class="demo-icon wa-lego">&#xe93c;</i> <span class="i-name">was wa-lego</span><span class="i-code">0xe93c</span></div>
+        <div class="the-icons span3" title="Code: 0xe93d"><i class="demo-icon wa-attention-2">&#xe93d;</i> <span class="i-name">was wa-attention-2</span><span class="i-code">0xe93d</span></div>
+        <div class="the-icons span3" title="Code: 0xe93e"><i class="demo-icon wa-attention-filled">&#xe93e;</i> <span class="i-name">was wa-attention-filled</span><span class="i-code">0xe93e</span></div>
+        <div class="the-icons span3" title="Code: 0xe93f"><i class="demo-icon wa-warning-empty">&#xe93f;</i> <span class="i-name">was wa-warning-empty</span><span class="i-code">0xe93f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe940"><i class="demo-icon wa-warning">&#xe940;</i> <span class="i-name">was wa-warning</span><span class="i-code">0xe940</span></div>
+        <div class="the-icons span3" title="Code: 0xe941"><i class="demo-icon wa-direction-outline">&#xe941;</i> <span class="i-name">was wa-direction-outline</span><span class="i-code">0xe941</span></div>
+        <div class="the-icons span3" title="Code: 0xe942"><i class="demo-icon wa-direction-2">&#xe942;</i> <span class="i-name">was wa-direction-2</span><span class="i-code">0xe942</span></div>
+        <div class="the-icons span3" title="Code: 0xf08e"><i class="demo-icon wa-link-ext">&#xf08e;</i> <span class="i-name">was wa-link-ext</span><span class="i-code">0xf08e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf097"><i class="demo-icon wa-bookmark-empty">&#xf097;</i> <span class="i-name">was wa-bookmark-empty</span><span class="i-code">0xf097</span></div>
+        <div class="the-icons span3" title="Code: 0xf098"><i class="demo-icon wa-phone-squared">&#xf098;</i> <span class="i-name">was wa-phone-squared</span><span class="i-code">0xf098</span></div>
+        <div class="the-icons span3" title="Code: 0xf09e"><i class="demo-icon wa-rss">&#xf09e;</i> <span class="i-name">was wa-rss</span><span class="i-code">0xf09e</span></div>
+        <div class="the-icons span3" title="Code: 0xf0a8"><i class="demo-icon wa-left-circled">&#xf0a8;</i> <span class="i-name">was wa-left-circled</span><span class="i-code">0xf0a8</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0a9"><i class="demo-icon wa-right-circled">&#xf0a9;</i> <span class="i-name">was wa-right-circled</span><span class="i-code">0xf0a9</span></div>
+        <div class="the-icons span3" title="Code: 0xf0aa"><i class="demo-icon wa-up-circled">&#xf0aa;</i> <span class="i-name">was wa-up-circled</span><span class="i-code">0xf0aa</span></div>
+        <div class="the-icons span3" title="Code: 0xf0ab"><i class="demo-icon wa-down-circled">&#xf0ab;</i> <span class="i-name">was wa-down-circled</span><span class="i-code">0xf0ab</span></div>
+        <div class="the-icons span3" title="Code: 0xf0b2"><i class="demo-icon wa-resize-full-alt">&#xf0b2;</i> <span class="i-name">was wa-resize-full-alt</span><span class="i-code">0xf0b2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0c5"><i class="demo-icon wa-docs">&#xf0c5;</i> <span class="i-name">was wa-docs</span><span class="i-code">0xf0c5</span></div>
+        <div class="the-icons span3" title="Code: 0xf0c9"><i class="demo-icon wa-menu">&#xf0c9;</i> <span class="i-name">was wa-menu</span><span class="i-code">0xf0c9</span></div>
+        <div class="the-icons span3" title="Code: 0xf0e0"><i class="demo-icon wa-mail-alt">&#xf0e0;</i> <span class="i-name">was wa-mail-alt</span><span class="i-code">0xf0e0</span></div>
+        <div class="the-icons span3" title="Code: 0xf0e5"><i class="demo-icon wa-comment-empty">&#xf0e5;</i> <span class="i-name">was wa-comment-empty</span><span class="i-code">0xf0e5</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0e6"><i class="demo-icon wa-chat-empty">&#xf0e6;</i> <span class="i-name">was wa-chat-empty</span><span class="i-code">0xf0e6</span></div>
+        <div class="the-icons span3" title="Code: 0xf0eb"><i class="demo-icon wa-lightbulb">&#xf0eb;</i> <span class="i-name">was wa-lightbulb</span><span class="i-code">0xf0eb</span></div>
+        <div class="the-icons span3" title="Code: 0xf0ec"><i class="demo-icon wa-exchange">&#xf0ec;</i> <span class="i-name">was wa-exchange</span><span class="i-code">0xf0ec</span></div>
+        <div class="the-icons span3" title="Code: 0xf0ed"><i class="demo-icon wa-download-cloud">&#xf0ed;</i> <span class="i-name">was wa-download-cloud</span><span class="i-code">0xf0ed</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0ee"><i class="demo-icon wa-upload-cloud">&#xf0ee;</i> <span class="i-name">was wa-upload-cloud</span><span class="i-code">0xf0ee</span></div>
+        <div class="the-icons span3" title="Code: 0xf0f3"><i class="demo-icon wa-bell-alt">&#xf0f3;</i> <span class="i-name">was wa-bell-alt</span><span class="i-code">0xf0f3</span></div>
+        <div class="the-icons span3" title="Code: 0xf0f6"><i class="demo-icon wa-doc-text">&#xf0f6;</i> <span class="i-name">was wa-doc-text</span><span class="i-code">0xf0f6</span></div>
+        <div class="the-icons span3" title="Code: 0xf0fb"><i class="demo-icon wa-fighter-jet">&#xf0fb;</i> <span class="i-name">was wa-fighter-jet</span><span class="i-code">0xf0fb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0fe"><i class="demo-icon wa-plus-squared">&#xf0fe;</i> <span class="i-name">was wa-plus-squared</span><span class="i-code">0xf0fe</span></div>
+        <div class="the-icons span3" title="Code: 0xf100"><i class="demo-icon wa-angle-double-left">&#xf100;</i> <span class="i-name">was wa-angle-double-left</span><span class="i-code">0xf100</span></div>
+        <div class="the-icons span3" title="Code: 0xf101"><i class="demo-icon wa-angle-double-right">&#xf101;</i> <span class="i-name">was wa-angle-double-right</span><span class="i-code">0xf101</span></div>
+        <div class="the-icons span3" title="Code: 0xf102"><i class="demo-icon wa-angle-double-up">&#xf102;</i> <span class="i-name">was wa-angle-double-up</span><span class="i-code">0xf102</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf103"><i class="demo-icon wa-angle-double-down">&#xf103;</i> <span class="i-name">was wa-angle-double-down</span><span class="i-code">0xf103</span></div>
+        <div class="the-icons span3" title="Code: 0xf104"><i class="demo-icon wa-angle-left">&#xf104;</i> <span class="i-name">was wa-angle-left</span><span class="i-code">0xf104</span></div>
+        <div class="the-icons span3" title="Code: 0xf105"><i class="demo-icon wa-angle-right">&#xf105;</i> <span class="i-name">was wa-angle-right</span><span class="i-code">0xf105</span></div>
+        <div class="the-icons span3" title="Code: 0xf106"><i class="demo-icon wa-angle-up">&#xf106;</i> <span class="i-name">was wa-angle-up</span><span class="i-code">0xf106</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf107"><i class="demo-icon wa-angle-down">&#xf107;</i> <span class="i-name">was wa-angle-down</span><span class="i-code">0xf107</span></div>
+        <div class="the-icons span3" title="Code: 0xf108"><i class="demo-icon wa-desktop">&#xf108;</i> <span class="i-name">was wa-desktop</span><span class="i-code">0xf108</span></div>
+        <div class="the-icons span3" title="Code: 0xf109"><i class="demo-icon wa-laptop">&#xf109;</i> <span class="i-name">was wa-laptop</span><span class="i-code">0xf109</span></div>
+        <div class="the-icons span3" title="Code: 0xf10a"><i class="demo-icon wa-tablet">&#xf10a;</i> <span class="i-name">was wa-tablet</span><span class="i-code">0xf10a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf10b"><i class="demo-icon wa-mobile">&#xf10b;</i> <span class="i-name">was wa-mobile</span><span class="i-code">0xf10b</span></div>
+        <div class="the-icons span3" title="Code: 0xf10d"><i class="demo-icon wa-quote-left">&#xf10d;</i> <span class="i-name">was wa-quote-left</span><span class="i-code">0xf10d</span></div>
+        <div class="the-icons span3" title="Code: 0xf10e"><i class="demo-icon wa-quote-right">&#xf10e;</i> <span class="i-name">was wa-quote-right</span><span class="i-code">0xf10e</span></div>
+        <div class="the-icons span3" title="Code: 0xf112"><i class="demo-icon wa-reply">&#xf112;</i> <span class="i-name">was wa-reply</span><span class="i-code">0xf112</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf114"><i class="demo-icon wa-folder-empty">&#xf114;</i> <span class="i-name">was wa-folder-empty</span><span class="i-code">0xf114</span></div>
+        <div class="the-icons span3" title="Code: 0xf115"><i class="demo-icon wa-folder-open-empty">&#xf115;</i> <span class="i-name">was wa-folder-open-empty</span><span class="i-code">0xf115</span></div>
+        <div class="the-icons span3" title="Code: 0xf118"><i class="demo-icon wa-smile">&#xf118;</i> <span class="i-name">was wa-smile</span><span class="i-code">0xf118</span></div>
+        <div class="the-icons span3" title="Code: 0xf119"><i class="demo-icon wa-frown">&#xf119;</i> <span class="i-name">was wa-frown</span><span class="i-code">0xf119</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf11a"><i class="demo-icon wa-meh">&#xf11a;</i> <span class="i-name">was wa-meh</span><span class="i-code">0xf11a</span></div>
+        <div class="the-icons span3" title="Code: 0xf11b"><i class="demo-icon wa-gamepad">&#xf11b;</i> <span class="i-name">was wa-gamepad</span><span class="i-code">0xf11b</span></div>
+        <div class="the-icons span3" title="Code: 0xf11c"><i class="demo-icon wa-keyboard">&#xf11c;</i> <span class="i-name">was wa-keyboard</span><span class="i-code">0xf11c</span></div>
+        <div class="the-icons span3" title="Code: 0xf11d"><i class="demo-icon wa-flag-empty">&#xf11d;</i> <span class="i-name">was wa-flag-empty</span><span class="i-code">0xf11d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf11e"><i class="demo-icon wa-flag-checkered">&#xf11e;</i> <span class="i-name">was wa-flag-checkered</span><span class="i-code">0xf11e</span></div>
+        <div class="the-icons span3" title="Code: 0xf121"><i class="demo-icon wa-code">&#xf121;</i> <span class="i-name">was wa-code</span><span class="i-code">0xf121</span></div>
+        <div class="the-icons span3" title="Code: 0xf122"><i class="demo-icon wa-reply-all">&#xf122;</i> <span class="i-name">was wa-reply-all</span><span class="i-code">0xf122</span></div>
+        <div class="the-icons span3" title="Code: 0xf123"><i class="demo-icon wa-star-half-alt">&#xf123;</i> <span class="i-name">was wa-star-half-alt</span><span class="i-code">0xf123</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf124"><i class="demo-icon wa-direction">&#xf124;</i> <span class="i-name">was wa-direction</span><span class="i-code">0xf124</span></div>
+        <div class="the-icons span3" title="Code: 0xf127"><i class="demo-icon wa-unlink">&#xf127;</i> <span class="i-name">was wa-unlink</span><span class="i-code">0xf127</span></div>
+        <div class="the-icons span3" title="Code: 0xf128"><i class="demo-icon wa-help">&#xf128;</i> <span class="i-name">was wa-help</span><span class="i-code">0xf128</span></div>
+        <div class="the-icons span3" title="Code: 0xf129"><i class="demo-icon wa-info">&#xf129;</i> <span class="i-name">was wa-info</span><span class="i-code">0xf129</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf12a"><i class="demo-icon wa-attention-alt">&#xf12a;</i> <span class="i-name">was wa-attention-alt</span><span class="i-code">0xf12a</span></div>
+        <div class="the-icons span3" title="Code: 0xf130"><i class="demo-icon wa-mic">&#xf130;</i> <span class="i-name">was wa-mic</span><span class="i-code">0xf130</span></div>
+        <div class="the-icons span3" title="Code: 0xf131"><i class="demo-icon wa-mute">&#xf131;</i> <span class="i-name">was wa-mute</span><span class="i-code">0xf131</span></div>
+        <div class="the-icons span3" title="Code: 0xf133"><i class="demo-icon wa-calendar-empty">&#xf133;</i> <span class="i-name">was wa-calendar-empty</span><span class="i-code">0xf133</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf137"><i class="demo-icon wa-angle-circled-left">&#xf137;</i> <span class="i-name">was wa-angle-circled-left</span><span class="i-code">0xf137</span></div>
+        <div class="the-icons span3" title="Code: 0xf138"><i class="demo-icon wa-angle-circled-right">&#xf138;</i> <span class="i-name">was wa-angle-circled-right</span><span class="i-code">0xf138</span></div>
+        <div class="the-icons span3" title="Code: 0xf139"><i class="demo-icon wa-angle-circled-up">&#xf139;</i> <span class="i-name">was wa-angle-circled-up</span><span class="i-code">0xf139</span></div>
+        <div class="the-icons span3" title="Code: 0xf13a"><i class="demo-icon wa-angle-circled-down">&#xf13a;</i> <span class="i-name">was wa-angle-circled-down</span><span class="i-code">0xf13a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf13e"><i class="demo-icon wa-lock-open-alt">&#xf13e;</i> <span class="i-name">was wa-lock-open-alt</span><span class="i-code">0xf13e</span></div>
+        <div class="the-icons span3" title="Code: 0xf143"><i class="demo-icon wa-rss-squared">&#xf143;</i> <span class="i-name">was wa-rss-squared</span><span class="i-code">0xf143</span></div>
+        <div class="the-icons span3" title="Code: 0xf144"><i class="demo-icon wa-play-circled">&#xf144;</i> <span class="i-name">was wa-play-circled</span><span class="i-code">0xf144</span></div>
+        <div class="the-icons span3" title="Code: 0xf146"><i class="demo-icon wa-minus-squared">&#xf146;</i> <span class="i-name">was wa-minus-squared</span><span class="i-code">0xf146</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf147"><i class="demo-icon wa-minus-squared-alt">&#xf147;</i> <span class="i-name">was wa-minus-squared-alt</span><span class="i-code">0xf147</span></div>
+        <div class="the-icons span3" title="Code: 0xf148"><i class="demo-icon wa-level-up">&#xf148;</i> <span class="i-name">was wa-level-up</span><span class="i-code">0xf148</span></div>
+        <div class="the-icons span3" title="Code: 0xf149"><i class="demo-icon wa-level-down">&#xf149;</i> <span class="i-name">was wa-level-down</span><span class="i-code">0xf149</span></div>
+        <div class="the-icons span3" title="Code: 0xf14a"><i class="demo-icon wa-ok-squared">&#xf14a;</i> <span class="i-name">was wa-ok-squared</span><span class="i-code">0xf14a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf14b"><i class="demo-icon wa-pencil-squared">&#xf14b;</i> <span class="i-name">was wa-pencil-squared</span><span class="i-code">0xf14b</span></div>
+        <div class="the-icons span3" title="Code: 0xf14c"><i class="demo-icon wa-link-ext-alt">&#xf14c;</i> <span class="i-name">was wa-link-ext-alt</span><span class="i-code">0xf14c</span></div>
+        <div class="the-icons span3" title="Code: 0xf14d"><i class="demo-icon wa-export-alt">&#xf14d;</i> <span class="i-name">was wa-export-alt</span><span class="i-code">0xf14d</span></div>
+        <div class="the-icons span3" title="Code: 0xf14e"><i class="demo-icon wa-compass">&#xf14e;</i> <span class="i-name">was wa-compass</span><span class="i-code">0xf14e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf150"><i class="demo-icon wa-expand">&#xf150;</i> <span class="i-name">was wa-expand</span><span class="i-code">0xf150</span></div>
+        <div class="the-icons span3" title="Code: 0xf151"><i class="demo-icon wa-collapse">&#xf151;</i> <span class="i-name">was wa-collapse</span><span class="i-code">0xf151</span></div>
+        <div class="the-icons span3" title="Code: 0xf152"><i class="demo-icon wa-expand-right">&#xf152;</i> <span class="i-name">was wa-expand-right</span><span class="i-code">0xf152</span></div>
+        <div class="the-icons span3" title="Code: 0xf15b"><i class="demo-icon wa-doc-inv">&#xf15b;</i> <span class="i-name">was wa-doc-inv</span><span class="i-code">0xf15b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf15c"><i class="demo-icon wa-doc-text-inv">&#xf15c;</i> <span class="i-name">was wa-doc-text-inv</span><span class="i-code">0xf15c</span></div>
+        <div class="the-icons span3" title="Code: 0xf164"><i class="demo-icon wa-thumbs-up-alt">&#xf164;</i> <span class="i-name">was wa-thumbs-up-alt</span><span class="i-code">0xf164</span></div>
+        <div class="the-icons span3" title="Code: 0xf165"><i class="demo-icon wa-thumbs-down-alt">&#xf165;</i> <span class="i-name">was wa-thumbs-down-alt</span><span class="i-code">0xf165</span></div>
+        <div class="the-icons span3" title="Code: 0xf175"><i class="demo-icon wa-down">&#xf175;</i> <span class="i-name">was wa-down</span><span class="i-code">0xf175</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf176"><i class="demo-icon wa-up">&#xf176;</i> <span class="i-name">was wa-up</span><span class="i-code">0xf176</span></div>
+        <div class="the-icons span3" title="Code: 0xf177"><i class="demo-icon wa-left">&#xf177;</i> <span class="i-name">was wa-left</span><span class="i-code">0xf177</span></div>
+        <div class="the-icons span3" title="Code: 0xf178"><i class="demo-icon wa-right">&#xf178;</i> <span class="i-name">was wa-right</span><span class="i-code">0xf178</span></div>
+        <div class="the-icons span3" title="Code: 0xf185"><i class="demo-icon wa-sun">&#xf185;</i> <span class="i-name">was wa-sun</span><span class="i-code">0xf185</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf186"><i class="demo-icon wa-moon">&#xf186;</i> <span class="i-name">was wa-moon</span><span class="i-code">0xf186</span></div>
+        <div class="the-icons span3" title="Code: 0xf187"><i class="demo-icon wa-box">&#xf187;</i> <span class="i-name">was wa-box</span><span class="i-code">0xf187</span></div>
+        <div class="the-icons span3" title="Code: 0xf18e"><i class="demo-icon wa-right-circled2">&#xf18e;</i> <span class="i-name">was wa-right-circled2</span><span class="i-code">0xf18e</span></div>
+        <div class="the-icons span3" title="Code: 0xf190"><i class="demo-icon wa-left-circled2">&#xf190;</i> <span class="i-name">was wa-left-circled2</span><span class="i-code">0xf190</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf191"><i class="demo-icon wa-collapse-left">&#xf191;</i> <span class="i-name">was wa-collapse-left</span><span class="i-code">0xf191</span></div>
+        <div class="the-icons span3" title="Code: 0xf196"><i class="demo-icon wa-plus-squared-alt">&#xf196;</i> <span class="i-name">was wa-plus-squared-alt</span><span class="i-code">0xf196</span></div>
+        <div class="the-icons span3" title="Code: 0xf197"><i class="demo-icon wa-space-shuttle">&#xf197;</i> <span class="i-name">was wa-space-shuttle</span><span class="i-code">0xf197</span></div>
+        <div class="the-icons span3" title="Code: 0xf1ac"><i class="demo-icon wa-fax">&#xf1ac;</i> <span class="i-name">was wa-fax</span><span class="i-code">0xf1ac</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf1c1"><i class="demo-icon wa-file-pdf">&#xf1c1;</i> <span class="i-name">was wa-file-pdf</span><span class="i-code">0xf1c1</span></div>
+        <div class="the-icons span3" title="Code: 0xf1c2"><i class="demo-icon wa-file-word">&#xf1c2;</i> <span class="i-name">was wa-file-word</span><span class="i-code">0xf1c2</span></div>
+        <div class="the-icons span3" title="Code: 0xf1c3"><i class="demo-icon wa-file-excel">&#xf1c3;</i> <span class="i-name">was wa-file-excel</span><span class="i-code">0xf1c3</span></div>
+        <div class="the-icons span3" title="Code: 0xf1c4"><i class="demo-icon wa-file-powerpoint">&#xf1c4;</i> <span class="i-name">was wa-file-powerpoint</span><span class="i-code">0xf1c4</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf1c5"><i class="demo-icon wa-file-image">&#xf1c5;</i> <span class="i-name">was wa-file-image</span><span class="i-code">0xf1c5</span></div>
+        <div class="the-icons span3" title="Code: 0xf1c6"><i class="demo-icon wa-file-archive">&#xf1c6;</i> <span class="i-name">was wa-file-archive</span><span class="i-code">0xf1c6</span></div>
+        <div class="the-icons span3" title="Code: 0xf1c7"><i class="demo-icon wa-file-audio">&#xf1c7;</i> <span class="i-name">was wa-file-audio</span><span class="i-code">0xf1c7</span></div>
+        <div class="the-icons span3" title="Code: 0xf1c8"><i class="demo-icon wa-file-video">&#xf1c8;</i> <span class="i-name">was wa-file-video</span><span class="i-code">0xf1c8</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf1c9"><i class="demo-icon wa-file-code">&#xf1c9;</i> <span class="i-name">was wa-file-code</span><span class="i-code">0xf1c9</span></div>
+        <div class="the-icons span3" title="Code: 0xf1d8"><i class="demo-icon wa-paper-plane">&#xf1d8;</i> <span class="i-name">was wa-paper-plane</span><span class="i-code">0xf1d8</span></div>
+        <div class="the-icons span3" title="Code: 0xf1d9"><i class="demo-icon wa-paper-plane-empty">&#xf1d9;</i> <span class="i-name">was wa-paper-plane-empty</span><span class="i-code">0xf1d9</span></div>
+        <div class="the-icons span3" title="Code: 0xf1da"><i class="demo-icon wa-history">&#xf1da;</i> <span class="i-name">was wa-history</span><span class="i-code">0xf1da</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf1de"><i class="demo-icon wa-sliders">&#xf1de;</i> <span class="i-name">was wa-sliders</span><span class="i-code">0xf1de</span></div>
+        <div class="the-icons span3" title="Code: 0xf1e0"><i class="demo-icon wa-share">&#xf1e0;</i> <span class="i-name">was wa-share</span><span class="i-code">0xf1e0</span></div>
+        <div class="the-icons span3" title="Code: 0xf1e1"><i class="demo-icon wa-share-squared">&#xf1e1;</i> <span class="i-name">was wa-share-squared</span><span class="i-code">0xf1e1</span></div>
+        <div class="the-icons span3" title="Code: 0xf1eb"><i class="demo-icon wa-wifi">&#xf1eb;</i> <span class="i-name">was wa-wifi</span><span class="i-code">0xf1eb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf1f6"><i class="demo-icon wa-bell-off">&#xf1f6;</i> <span class="i-name">was wa-bell-off</span><span class="i-code">0xf1f6</span></div>
+        <div class="the-icons span3" title="Code: 0xf1f7"><i class="demo-icon wa-bell-off-empty">&#xf1f7;</i> <span class="i-name">was wa-bell-off-empty</span><span class="i-code">0xf1f7</span></div>
+        <div class="the-icons span3" title="Code: 0xf1f8"><i class="demo-icon wa-trash">&#xf1f8;</i> <span class="i-name">was wa-trash</span><span class="i-code">0xf1f8</span></div>
+        <div class="the-icons span3" title="Code: 0xf213"><i class="demo-icon wa-sellsy">&#xf213;</i> <span class="i-name">was wa-sellsy</span><span class="i-code">0xf213</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf217"><i class="demo-icon wa-cart-plus">&#xf217;</i> <span class="i-name">was wa-cart-plus</span><span class="i-code">0xf217</span></div>
+        <div class="the-icons span3" title="Code: 0xf218"><i class="demo-icon wa-cart-arrow-down">&#xf218;</i> <span class="i-name">was wa-cart-arrow-down</span><span class="i-code">0xf218</span></div>
+        <div class="the-icons span3" title="Code: 0xf21b"><i class="demo-icon wa-user-secret">&#xf21b;</i> <span class="i-name">was wa-user-secret</span><span class="i-code">0xf21b</span></div>
+        <div class="the-icons span3" title="Code: 0xf234"><i class="demo-icon wa-user-plus">&#xf234;</i> <span class="i-name">was wa-user-plus</span><span class="i-code">0xf234</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf235"><i class="demo-icon wa-user-times">&#xf235;</i> <span class="i-name">was wa-user-times</span><span class="i-code">0xf235</span></div>
+        <div class="the-icons span3" title="Code: 0xf25b"><i class="demo-icon wa-hand-peace-o">&#xf25b;</i> <span class="i-name">was wa-hand-peace-o</span><span class="i-code">0xf25b</span></div>
+        <div class="the-icons span3" title="Code: 0xf25c"><i class="demo-icon wa-trademark">&#xf25c;</i> <span class="i-name">was wa-trademark</span><span class="i-code">0xf25c</span></div>
+        <div class="the-icons span3" title="Code: 0xf25d"><i class="demo-icon wa-registered">&#xf25d;</i> <span class="i-name">was wa-registered</span><span class="i-code">0xf25d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf267"><i class="demo-icon wa-safari">&#xf267;</i> <span class="i-name">was wa-safari</span><span class="i-code">0xf267</span></div>
+        <div class="the-icons span3" title="Code: 0xf268"><i class="demo-icon wa-chrome-1">&#xf268;</i> <span class="i-name">was wa-chrome-1</span><span class="i-code">0xf268</span></div>
+        <div class="the-icons span3" title="Code: 0xf269"><i class="demo-icon wa-firefox-1">&#xf269;</i> <span class="i-name">was wa-firefox-1</span><span class="i-code">0xf269</span></div>
+        <div class="the-icons span3" title="Code: 0xf26a"><i class="demo-icon wa-opera-1">&#xf26a;</i> <span class="i-name">was wa-opera-1</span><span class="i-code">0xf26a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf26b"><i class="demo-icon wa-internet-explorer">&#xf26b;</i> <span class="i-name">was wa-internet-explorer</span><span class="i-code">0xf26b</span></div>
+        <div class="the-icons span3" title="Code: 0xf282"><i class="demo-icon wa-edge">&#xf282;</i> <span class="i-name">was wa-edge</span><span class="i-code">0xf282</span></div>
+        <div class="the-icons span3" title="Code: 0xf287"><i class="demo-icon wa-usb">&#xf287;</i> <span class="i-name">was wa-usb</span><span class="i-code">0xf287</span></div>
+      </div>
+    </div>
+  </body>
+</html>
